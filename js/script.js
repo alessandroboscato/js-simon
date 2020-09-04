@@ -14,7 +14,20 @@ numList.push(randomNumber);
 console.log(numList);
 }
 
-alert("Simon says the numbers you should remember are " + numList[0] + " and " + numList[1] + " and " + numList[2] + " and " + numList[3] + " and " + numList[4] + ".");
+alert("Simon says the numbers " + numList[0] + " and " + numList[1] + " and " + numList[2] + " and " + numList[3] + " and " + numList[4] + ".");
+
+//2. Creo una funzione che domandi il numero all'utente e controlli se è presente tra quelli generati casualmente;
+var rememberedNumbers = [];
+function askNumber() {
+  var number = prompt("Insert the number you remember one by one.");
+
+  if (numList.include(number)) {
+    rememberedNumbers.push(number)
+  }
+}
+
+var numbers = askNumber();
+console.log(rememberedNumbers);
 
 
 
