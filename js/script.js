@@ -35,16 +35,22 @@ function pushIf(array, condizione, elemento) {
   }
 }
 //4. Creo la funzione che faccia le operazioni precedenti 5 volte;
+var rememberedNumbers = [];
 
-do {
+function myFunction() {
+  for (var i = 0; i < 5; i++) {
+    var number = prompt("Insert the number you remember one by one.");
+    var primaFunzione = inArray(numList, number);
+    console.log(primaFunzione);
+    var secondaFunzione = pushIf(rememberedNumbers, primaFunzione, number);
+  }
+  console.log("You remembered " + rememberedNumbers.length + "numbers: " + rememberedNumbers[0] + rememberedNumbers[1] + rememberedNumbers[2] + rememberedNumbers[3] + rememberedNumbers[4] + rememberedNumbers[5])
 
 }
 
-var number = prompt("Insert the number you remember one by one.");
-var askNumber = inArray(numList, number);
+//5. Creo la funzione asincrona
+setTimeout(myFunction, 1000);
 
-setTimeout(pushIf, )
-var rememberedNumbers = [];
 
 
 
