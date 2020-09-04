@@ -17,19 +17,34 @@ console.log(numList);
 alert("Simon says the numbers " + numList[0] + " and " + numList[1] + " and " + numList[2] + " and " + numList[3] + " and " + numList[4] + ".");
 
 //2. Creo una funzione che domandi il numero all'utente e controlli se è presente tra quelli generati casualmente;
-var rememberedNumbers = [];
-function askNumber() {
-  var number = prompt("Insert the number you remember one by one.");
 
-  if (numList.include(number)) {
-    rememberedNumbers.push(number)
+function inArray(array, elemento) {
+  var trovato = false;
+  for (var i = 0; i < array.length; i++) {
+    if(array[i] == elemento) {
+      trovato = true
+    }
+  }
+  return trovato;
+}
+//3. Creo una funzione che lo inserisca nell'array dei numeri ricordati se la condizione precedente è true;
+
+function pushIf(array, condizione, elemento) {
+  if (condizione == true) {
+    array.push(elemento)
   }
 }
+//4. Creo la funzione che faccia le operazioni precedenti 5 volte;
 
-var numbers = askNumber();
-console.log(rememberedNumbers);
+do {
 
+}
 
+var number = prompt("Insert the number you remember one by one.");
+var askNumber = inArray(numList, number);
+
+setTimeout(pushIf, )
+var rememberedNumbers = [];
 
 
 
