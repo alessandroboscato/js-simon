@@ -41,15 +41,13 @@ function myFunction() {
   for (var i = 0; i < 5; i++) {
     var number = prompt("Insert the number you remember one by one.");
     var primaFunzione = inArray(numList, number);
-    console.log(primaFunzione);
     var secondaFunzione = pushIf(rememberedNumbers, primaFunzione, number);
   }
-  console.log("You remembered " + rememberedNumbers.length + "numbers: " + rememberedNumbers[0] + rememberedNumbers[1] + rememberedNumbers[2] + rememberedNumbers[3] + rememberedNumbers[4] + rememberedNumbers[5])
-
+  console.log("You remembered the foollowing numbers: " + rememberedNumbers + ", for a total of " + rememberedNumbers.length)
 }
 
 //5. Creo la funzione asincrona
-setTimeout(myFunction, 1000);
+setTimeout(myFunction, 3000);
 
 
 
